@@ -14,10 +14,10 @@ get_header(); ?>
         <div class="categorias">
             <h1 id="categoriamain"><?php echo get_search_query(); ?></h1>
     <?php 
-    $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-    $args = array ( 's' => get_search_query(), 'posts_per_page' => 15,'paged' => $paged);
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $args = array( 's' => get_search_query(), 'posts_per_page' => 15,'paged' => $paged);
     $myposts = new WP_Query($args);
-    while ( $myposts->have_posts() ) : $myposts->the_post();
+    while ($myposts->have_posts()) : $myposts->the_post();
     ?>
     <div class="noticia-categoria">
                 <div id="titulo">
@@ -28,7 +28,7 @@ get_header(); ?>
         <?php the_excerpt(); ?>
                 </div>
     </div>    
-    <?php endwhile; // end of the loop. ?>
+    <?php endwhile; // end of the loop.?>
         <div class="pagination">
             <div class="nav-previous alignleft"><?php next_posts_link('< Noticias Anteriores'); ?></div>
             <div class="nav-next alignright"><?php previous_posts_link('Noticias mas Recientes >'); ?></div>

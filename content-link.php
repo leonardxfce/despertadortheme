@@ -17,14 +17,14 @@
                 <h3 class="entry-format"><?php _e('Link', 'twentyeleven'); ?></h3>
             </hgroup>
 
-    <?php if (comments_open() && ! post_password_required() ) : ?>
+    <?php if (comments_open() && ! post_password_required()) : ?>
             <div class="comments-link">
                 <?php comments_popup_link('<span class="leave-reply">' . __('Reply', 'twentyeleven') . '</span>', _x('1', 'comments number', 'twentyeleven'), _x('%', 'comments number', 'twentyeleven')); ?>
             </div>
     <?php endif; ?>
         </header><!-- .entry-header -->
 
-    <?php if (is_search() ) : // Only display Excerpts for Search ?>
+    <?php if (is_search()) : // Only display Excerpts for Search?>
         <div class="entry-summary">
     <?php the_excerpt(); ?>
         </div><!-- .entry-summary -->

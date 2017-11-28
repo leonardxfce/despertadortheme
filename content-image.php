@@ -16,7 +16,7 @@
                 <h3 class="entry-format"><?php _e('Image', 'twentyeleven'); ?></h3>
             </hgroup>
 
-    <?php if (comments_open() && ! post_password_required() ) : ?>
+    <?php if (comments_open() && ! post_password_required()) : ?>
             <div class="comments-link">
                 <?php comments_popup_link('<span class="leave-reply">' . __("Reply", 'twentyeleven') . '</span>', _x('1', 'comments number', 'twentyeleven'), _x('%', 'comments number', 'twentyeleven')); ?>
             </div>
@@ -46,24 +46,24 @@
                 <?php
                     /* translators: used between list items, there is a space after the comma */
                     $categories_list = get_the_category_list(__(', ', 'twentyeleven'));
-                if ($categories_list ) :
+                if ($categories_list) :
                             ?>
                             <span class="cat-links">
                 <?php printf(__('<span class="%1$s">Posted in</span> %2$s', 'twentyeleven'), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list); ?>
                 </span>
-                <?php endif; // End if categories ?>
+                <?php endif; // End if categories?>
                 <?php
                     /* translators: used between list items, there is a space after the comma */
                     $tags_list = get_the_tag_list('', __(', ', 'twentyeleven'));
-                if ($tags_list ) : ?>
+                if ($tags_list) : ?>
                             <span class="tag-links">
                     <?php printf(__('<span class="%1$s">Tagged</span> %2$s', 'twentyeleven'), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list); ?>
                             </span>
-                <?php endif; // End if $tags_list ?>
+                <?php endif; // End if $tags_list?>
 
-                <?php if (comments_open() ) : ?>
+                <?php if (comments_open()) : ?>
                 <span class="comments-link"><?php comments_popup_link('<span class="leave-reply">' . __('Leave a reply', 'twentyeleven') . '</span>', __('<b>1</b> Reply', 'twentyeleven'), __('<b>%</b> Replies', 'twentyeleven')); ?></span>
-                <?php endif; // End if comments_open() ?>
+                <?php endif; // End if comments_open()?>
             </div><!-- .entry-meta -->
 
     <?php edit_post_link(__('Edit', 'twentyeleven'), '<span class="edit-link">', '</span>'); ?>

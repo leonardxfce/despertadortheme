@@ -31,7 +31,8 @@
         <meta name=viewport content="width=device-width, initial-scale=1">
         <title>El Despertador - Noticias de Lavalle, Mendoza y El Mundo</title>
         <meta property="fb:pages" content="364842676926469" />
-        <?php if (curPageURL() == get_site_url() . "/") { ?>
+        <?php if (curPageURL() == get_site_url() . "/") {
+    ?>
             <link rel="canonical" href="http://despertadorlavalle.com.ar/" />
             <link href="https://plus.google.com/110576088749422697808" rel="publisher">
             <link rel="image_src" href="http://static1.despertadorlavalle.com.ar/wp-content/themes/eldespertadortheme/img/logo.png" />
@@ -51,16 +52,16 @@
 if (is_single()) {
     while (have_posts()) : the_post();
 
-        function new_excerpt_more($more) {
-            return '';
-        }
+    function new_excerpt_more($more)
+    {
+        return '';
+    }
 
-        add_filter('excerpt_more', 'new_excerpt_more');
-        $resumen = get_the_excerpt();
+    add_filter('excerpt_more', 'new_excerpt_more');
+    $resumen = get_the_excerpt();
     endwhile;
     $thumbID = get_post_thumbnail_id();
-    $imgDestacada = wp_get_attachment_url($thumbID);
-    ?>
+    $imgDestacada = wp_get_attachment_url($thumbID); ?>
             <meta name="description" content="<?php echo $resumen; ?>"/>
             <meta property='fb:app_id' content='517649738391808' />
             <meta property='fb:admins' content='1416093550' />
@@ -72,7 +73,8 @@ if (is_single()) {
             <meta property="og:image" content="http://static3.despertadorlavalle.com.ar/wp-content/themes/eldespertadortheme/img/logo.jpg" />
             <link href="<?php echo $imgDestacada; ?>" rel="image_src" />
             <link rel="amphtml" href="<?php echo curPageURL() ?>amp/">
-<?php } ?>
+<?php
+} ?>
         <meta name="robots" CONTENT="NOODP">
         <link rel="alternate" hreflang="es" href="http://despertadorlavalle.com.ar/" />
         <link rel="profile" href="http://gmpg.org/xfn/11" />

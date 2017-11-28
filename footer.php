@@ -49,7 +49,8 @@
 <link rel="stylesheet" type="text/css" href="http://despertadorlavalle.com.ar/wp-content/themes/eldespertadortheme/css/fa/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="http://static4.despertadorlavalle.com.ar/wp-content/themes/eldespertadortheme/css/despertador.css?v=86" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<?php if (curPageURL() == get_site_url() . "/") { ?>
+<?php if (curPageURL() == get_site_url() . "/") {
+        ?>
     <script type="application/ld+json">
         {
         "@context": "http://schema.org",
@@ -85,7 +86,8 @@
             $("ul.playlist").ytplaylist({addThumbs: true, holderId: 'ytvideo'});
         });
     </script>
-<?php } ?>
+<?php
+    } ?>
 
 <script type="text/javascript">
     $(document).ready(function () {

@@ -8,7 +8,7 @@
  */
 get_header(); ?>
 <main id="content">
-    <?php while ( have_posts() ) : the_post(); ?>                
+    <?php while (have_posts()) : the_post(); ?>                
         <article class="noticia-singular" id="nota" >
             <div id="titulo">
                 <h1><?php the_title();?></h1>
@@ -29,18 +29,18 @@ get_header(); ?>
                 <div class="fb-share-button" data-href="<?php get_permalink(); ?>" data-type="box_count"></div>
             </div>
             <div class="fb-comments" data-href="<?php echo get_the_permalink(); ?>" data-numposts="10" data-colorscheme="light"></div>
-    <?php endwhile; // end of the loop. ?>
+    <?php endwhile; // end of the loop.?>
     </article>
     <aside id="relacionadas">
         <h3>Relacionadas</h3>
         <ul id="related">
     <?php
-    $category = get_the_category(); 
+    $category = get_the_category();
     $ct=$category[0]->cat_name;
 
     $args = array( 'numberposts' => '6','post_status' => 'publish','category' => get_cat_ID($ct));
     $recent_posts = wp_get_recent_posts($args);
-    foreach( $recent_posts as $recent ){
+    foreach ($recent_posts as $recent) {
         echo '<li class="titr">'.'<a href="' . get_permalink($recent["ID"]) . '">' . get_the_post_thumbnail($recent["ID"], 'medium');
         echo '<h4>'.$recent["post_title"].' </h4> </a> </li> ';
     }
@@ -51,7 +51,7 @@ get_header(); ?>
 </main><!-- #content -->
 <?php 
 $thumbID = get_post_thumbnail_id();
-$imgDestacada = wp_get_attachment_url($thumbID); 
+$imgDestacada = wp_get_attachment_url($thumbID);
 ?>
 <script type="application/ld+json">
     {

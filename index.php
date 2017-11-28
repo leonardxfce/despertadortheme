@@ -13,11 +13,13 @@ $estaticos4 = "http://static3.despertadorlavalle.com.ar/wp-content/themes/eldesp
         <?php while (have_posts()) : the_post(); ?>
             <article class="noticia">
                 <h3 class="categoria"><?php echo the_category(" "); ?></h3>
-                <?php if (has_post_thumbnail()) { ?>
+                <?php if (has_post_thumbnail()) {
+    ?>
                     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
                         <?php the_post_thumbnail('medium'); ?>
                     </a>
-                <?php } ?>
+                <?php
+} ?>
                 <h4 class="post-<?php the_ID(); ?>" >
                     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
                         <?php the_title(); ?>
@@ -34,11 +36,13 @@ $estaticos4 = "http://static3.despertadorlavalle.com.ar/wp-content/themes/eldesp
         <?php while ($loop2->have_posts()): $loop2->the_post(); ?>
             <article class="noticia">
                 <h3 class="categoria"><?php echo the_category(" "); ?></h3>
-                <?php if (has_post_thumbnail()) { ?>
+                <?php if (has_post_thumbnail()) {
+        ?>
                     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
                         <?php the_post_thumbnail('medium'); ?>
                     </a>
-                <?php } ?>
+                <?php
+    } ?>
                 <h4 id="post-<?php the_ID(); ?>">
                     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
                         <?php the_title(); ?>
