@@ -1,4 +1,14 @@
 <?php
+/**
+ * Index Tema Wordpress
+ * PHP version 7
+ * 
+ * @category Class
+ * @package  Tema
+ * @author   Leonardo Araoz <leonardo.araoz.dev@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     http://despertadorlavalle.com.ar
+ */
 $estaticos1 = "http://static1.despertadorlavalle.com.ar/wp-content/themes/eldespertadortheme/img/";
 $estaticos2 = "http://static2.despertadorlavalle.com.ar/wp-content/themes/eldespertadortheme/img/";
 $estaticos3 = "http://static3.despertadorlavalle.com.ar/wp-content/themes/eldespertadortheme/img/";
@@ -13,13 +23,11 @@ $estaticos4 = "http://static3.despertadorlavalle.com.ar/wp-content/themes/eldesp
         <?php while (have_posts()) : the_post(); ?>
             <article class="noticia">
                 <h3 class="categoria"><?php echo the_category(" "); ?></h3>
-                <?php if (has_post_thumbnail()) {
-    ?>
+                <?php if (has_post_thumbnail()) { ?>
                     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
                         <?php the_post_thumbnail('medium'); ?>
                     </a>
-                <?php
-} ?>
+                <?php } ?>
                 <h4 class="post-<?php the_ID(); ?>" >
                     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
                         <?php the_title(); ?>
@@ -41,8 +49,7 @@ $estaticos4 = "http://static3.despertadorlavalle.com.ar/wp-content/themes/eldesp
                     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
                         <?php the_post_thumbnail('medium'); ?>
                     </a>
-                <?php
-    } ?>
+                <?php } ?>
                 <h4 id="post-<?php the_ID(); ?>">
                     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
                         <?php the_title(); ?>

@@ -1,15 +1,15 @@
 <?php
-//error_reporting(0);
-//ob_start("ob_gzhandler");
-
 /**
  *  Header for our theme.
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @author     LeonardoAraoz <leonardo.araoz.dev@gmail.com>
+ * @license    CC
+ * @link       Leonardo Araoz 
+ * @since      Twenty Eleven 1.0
  */
 ?>
 <!DOCTYPE html>
@@ -121,8 +121,6 @@ if (is_single()) {
         </nav>
 
         <?php
-        if (is_single()) {
-            if (function_exists('yoast_breadcrumb')) {
-                yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
-            }
+        if (is_single() && function_exists('yoast_breadcrumb')) {
+                yoast_breadcrumb('<p id="breadcrumbs">', '</p>');       
         }?>
