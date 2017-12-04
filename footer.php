@@ -46,8 +46,8 @@
 
     </ul>    
 </footer>
-<link rel="stylesheet" type="text/css" href="http://despertadorlavalle.com.ar/wp-content/themes/eldespertadortheme/css/fa/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="http://static4.despertadorlavalle.com.ar/wp-content/themes/eldespertadortheme/css/despertador.css?v=86" />
+<link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>/wp-content/themes/eldespertadortheme/css/fa/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>/wp-content/themes/eldespertadortheme/css/despertador.css?v=86" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <?php if (curPageURL() == get_site_url() . "/") {
         ?>
@@ -56,10 +56,10 @@
         "@context": "http://schema.org",
         "@type": "WebSite",
         "name":"El Despertador Lavalle",
-        "url": "http://despertadorlavalle.com.ar/",
+        "url": "<?php echo site_url(); ?>/",
         "potentialAction": {
         "@type": "SearchAction",
-        "target": "http://despertadorlavalle.com.ar/?s={search_term_string}",
+        "target": "<?php echo site_url(); ?>/?s={search_term_string}",
         "query-input": "required name=search_term_string"
         }
         }
@@ -69,8 +69,8 @@
         "@context" : "http://schema.org",
         "@type" : "Organization",
         "name":"El Despertador Lavalle",
-        "url": "http://despertadorlavalle.com.ar/",
-        "logo": "http://static2.despertadorlavalle.com.ar/wp-content/themes/eldespertadortheme/img/logo.jpg",
+        "url": "<?php echo site_url(); ?>/",
+        "logo": "<?php echo site_url(); ?>/wp-content/themes/eldespertadortheme/img/logo.jpg",
         "sameAs" : [
         "https://twitter.com/Despertadorweb",
         "https://www.facebook.com/PeriodicoElDespertador",
@@ -80,7 +80,7 @@
         }
     </script>
 
-    <script type="text/javascript" src="http://static2.despertadorlavalle.com.ar/wp-content/themes/eldespertadortheme/js/youtubeplaylist.js"></script>
+    <script type="text/javascript" src="<?php echo site_url(); ?>/wp-content/themes/eldespertadortheme/js/youtubeplaylist.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $("ul.playlist").ytplaylist({addThumbs: true, holderId: 'ytvideo'});

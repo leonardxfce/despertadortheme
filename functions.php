@@ -643,7 +643,7 @@ add_action('customize_register', 'example_customizer');
 
 function periodico()
 {
-    $mysqli = new mysqli('localhost', 'desper95_wp70', ']879SP80)i', 'desper95_wp70');
+    $mysqli = new mysqli('localhost', 'root', '', 'desper95_wp70');
 
     /* comprobar la conexión */
     if ($mysqli->connect_errno) {
@@ -662,7 +662,7 @@ function periodico()
 }
 function videos()
 {
-    $mysqli = new mysqli('localhost', 'desper95_wp70', ']879SP80)i', 'desper95_wp70');
+    $mysqli = new mysqli('localhost', 'root', '', 'desper95_wp70');
     if ($mysqli->connect_errno) {
         printf("Falló la conexión: %s\n", $mysqli->connect_error);
         exit();
@@ -681,7 +681,7 @@ function videos()
 
 function ad()
 {
-    $mysqli = new mysqli('localhost', 'desper95_wp70', ']879SP80)i', 'desper95_wp70');
+    $mysqli = new mysqli('localhost', 'root', '', 'desper95_wp70');
 
     /* comprobar la conexión */
     if ($mysqli->connect_errno) {
